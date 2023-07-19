@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="PT-BR"></html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Css/style.css">
+</head>
+  <title>Controle de Nota Fiscal</title>
+</head>
+<body>
+  <h1>Controle de Nota Fiscal</h1>
+  <div class="image-container">
+    <img src="./Beaton.png" alt="Imagem" />
+  </div>
+  <form onsubmit="event.preventDefault(); adicionarNotaFiscal();">
+    <label for="ano">Ano:</label>
+    <input type="text" id="ano" required>
+    
+    <label for="valor">Valor:</label>
+    <input type="text" id="valor" required>
+    
+    <label for="cidade">Cidade:</label>
+    <input type="text" id="cidade" required>
+    
+    <label for="documento">Documento Fiscal:</label>
+    <input type="text" id="documento" required>
+    
+    <button type="submit">Adicionar NF</button>
+  </form>
+
+  <table id="estoque-table">
+    <thead>
+      <tr>
+        <th>Ano</th>
+        <th>Valor a Receber</th>
+        <th>Cidade</th>
+        <th>Documento Fiscal</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+
+  <div id="modalAlterarNotaFiscal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Alterar Nota Fiscal</h5>
+        <button type="button" onclick="fecharModal();" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <label for="modalAno">Ano:</label>
+        <input type="text" id="modalAno" required>
+
+        <label for="modalValor">Valor:</label>
+        <input type="text" id="modalValor" required>
+
+        <label for="modalCidade">Cidade:</label>
+        <input type="text" id="modalCidade" required>
+
+        <label for="modalDocumento">Documento Fiscal:</label>
+        <input type="text" id="modalDocumento" required>
+      </div>
+      <div class="modal-footer">
+        <button id="modalCancelar" type="button" onclick="fecharModal();" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button id="modalSalvar" type="button" onclick="salvarAlteracoes();" class="btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <button id="undoButton" class="undo-button" onclick="desfazerExclusao();" style="display: none;">Desfazer</button>
+
+
+
+<script src="./Js/main.js"></script>
+
+</body>
+</html>
