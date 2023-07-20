@@ -2,7 +2,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: black;
 
-    background: linear-gradient(rgb(122, 151, 255), rgb(80, 75, 75));
+    background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
     margin: 0;
     padding: 20px;
   }
@@ -61,7 +61,7 @@ body {
   th, td {
     padding: 8px;
     text-align: left;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid rgb(0, 0, 0);
   }
 
   th {
