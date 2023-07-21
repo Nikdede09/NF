@@ -1,187 +1,213 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
 
-   background-color: #87bfff;
-    margin: 0;
-    padding: 20px;
-  }
+ background-color: #87bfff;
+  margin: 0;
+  padding: 10px;
+}
 
-  h1 {
-    background: linear-gradient(rgb(255, 255, 255), rgb(173, 0, 0));
-    text-align: center;
-    font-family: 'Bebas Neue', sans-serif;   
-  border-radius: 100px;
-  border-style: ridge;
-  }
+h1 {
+  background: linear-gradient(rgb(255, 255, 255), rgb(173, 0, 0));
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;   
+border-radius: 100px;
+border-style: ridge;
+}
+form {
+margin-bottom: 20px;
+}
 
-  form {
-    margin-bottom: 20px;
-  }
+label {
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
+}
 
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #000000;
-  }
+input[type="text"],
+input[type="number"] {
+width: 100%;
+padding: 8px;
+font-size: 14px;
+border-radius: 4px;
+border: 1px solid #007c29;
+}
 
-  input[type="text"],
-  input[type="number"] {
-    width: 100%;
-    padding: 8px;
-    font-size: 14px;
-    border-radius: 4px;
-    border: 1px solid #007c29;
-  }
+button[type="submit"],
+button {
+background-color: #007004;
+color: white;
+border: none;
+padding: 10px 16px;
+font-size: 14px;
+border-radius: 4px;
+cursor: pointer;
+}
 
-  button[type="submit"],
-  button {
-    background-color: #007004;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    font-size: 14px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+button[type="submit"]:hover,
+button:hover {
+background-color: #45a049;
+}
 
-  button[type="submit"]:hover,
-  button:hover {
-    background-color: #45a049;
+table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 20px;
+border-radius: 4px;
+overflow: hidden;
+}
 
-  }
+th, td {
+padding: 8px;
+text-align: left;
+border-bottom: 1px solid rgb(0, 0, 0);
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
+th {
+background-color: #044d07;
+color: white;
+}
 
-  th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid rgb(0, 0, 0);
-  }
+.delete-button,
+.edit-button,
+.ok-button,
+.cancel-ok-button,
+.undo-button {
+padding: 5px 10px;
+border: none;
+cursor: pointer;
+font-size: 14px;
+border-radius: 10px;
+text-align: left;
+border-bottom: 1px solid black;
+position: static;
+margin-right: 10px;
+}
 
-  th {
-    background-color: #004b03;
-    color: rgb(255, 255, 255);
-  }
+.delete-button {
+background-color: #f44336;
+color: white;
+}
 
-  .delete-button {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin: 2px 2px;
-    cursor: pointer;
-  }
+.delete-button:hover {
+background-color: #d32f2f;
+}
 
-  .delete-button:hover {
-    background-color: #d32f2f;
-  }
+.edit-button {
+background-color: #ff9800;
+color: white;
+}
 
-  .edit-button {
-    background-color: #ff9800;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin: 2px 2px;
-    cursor: pointer;
-  }
+.edit-button:hover {
+background-color: #e69138;
+}
 
-  .edit-button:hover {
-    background-color: #e69138;
-  }
+.ok-button {
+background-color: #4caf50;
+color: white;
+}
 
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
+.ok-button:hover {
+background-color: #45a049;
+}
 
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #7a7a7a;
-    width: 80%;
-    max-width: 600px;
-  }
+.cancel-ok-button {
+background-color: #ca7070;
+color: white;
+}
 
-  .modal-header h5 {
-    margin-top: 0;
-  }
+.cancel-ok-button:hover {
+background-color: #b03737;
+}
 
-  .modal-body label {
-    display: inline-block;
-    width: 100px;
-  }
+.paid {
+background-color: #5ca35c !important;
+color: rgb(255, 255, 255) !important;
+}
 
-  .modal-footer {
-    text-align: right;
-  }
+.undo-button {
+background-color: #2196f3;
+color: white;
+border: none;
+padding: 6px 12px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 14px;
+margin: 2px 2px;
+cursor: pointer;
+border-radius: 4px;
+}
 
-  .modal-footer button {
-    margin-left: 10px;
-  }
+.undo-button:hover {
+background-color: #1976d2;
+}
 
-  .image-container {
-    display: flex;
-    justify-content: center;
-  }
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.4);
+}
 
-  .image-container img {
-    display: block;
-    margin: 0 auto;
-    padding: 2px;
-    max-width: 150px;
+.modal-content {
+background-color: #fefefe;
+margin: 15% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+max-width: 600px;
+border-radius: 4px;
+}
 
-  }
+.modal-header h5 {
+margin-top: 0;
+}
 
-  .undo-button {
-    background-color: #2196f3;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin: 2px 2px;
-    cursor: pointer;
-  }
+.modal-body label {
+display: inline-block;
+width: 100px;
+}
 
-  .undo-button:hover {
-    background-color: #1976d2;
-  }
+.modal-footer {
+text-align: right;
+}
 
-  .paid {
-    background-color: #388d38 !important;
-    color: rgb(255, 255, 255) !important;
-  }
+.modal-footer button {
+margin-left: 10px;
+}
 
-  .ok-button { 
-    padding: 7px;
-    border-radius: 12px;
-    width: 20;
-    left: 10px;
-  }
+.image-container {
+display: flex;
+justify-content: center;
+}
 
+.image-container img {
+display: block;
+margin: 0 auto;
+padding: 2px;
+max-width: 150px;
+}
 
-  
+.cancel-all-ok-button {
+background-color: #e91e63;
+color: white;
+border: none;
+padding: 6px 12px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 14px;
+margin-top: 10px;
+cursor: pointer;
+border-radius: 4px;
+}
+
+.cancel-all-ok-button:hover {
+background-color: #c2185b;
+}
